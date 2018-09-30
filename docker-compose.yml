@@ -10,16 +10,16 @@ services:
     ports:
       - "8080:8080"
 
-  portainer:
-    image: portainer/portainer
-    ports:
-      - "9000:9000"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer:/data
-    deploy:
-      placement:
-        constraints: [node.role == manager]
+  # portainer:
+  #   image: portainer/portainer
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - portainer:/data
+  #   deploy:
+  #     placement:
+  #       constraints: [node.role == manager]
 
 volumes:
   portainer:
